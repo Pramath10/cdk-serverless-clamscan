@@ -237,6 +237,8 @@ def scan(input_bucket, input_key, download_path, definitions_path, tmp_path):
             "--stdout",
             f"--max-filesize={MAX_BYTES}",
             f"--max-scansize={MAX_BYTES}",
+            f"--max-files ={MAX_BYTES}",
+            f"--max-ziptypercg={MAX_BYTES}",
             f"--database={definitions_path}",
             "-r",
             f"--tempdir={tmp_path}",
